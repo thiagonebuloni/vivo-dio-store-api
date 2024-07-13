@@ -1,5 +1,4 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from datetime import datetime
 
 
 class Settings(BaseSettings):
@@ -12,3 +11,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+# print(settings.DATABASE_URL)

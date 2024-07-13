@@ -15,6 +15,7 @@ motor = "^3.5.0"
 pytest = "^8.2.2"
 pytest-asyncio = "^0.23.7"
 pre-commit = "^3.7.1"
+pymongo = "^4.8.0"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
