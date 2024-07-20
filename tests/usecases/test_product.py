@@ -8,7 +8,7 @@ from store.usecases.product import product_usecase
 from store.core.exceptions import NotFoundException
 
 
-async def test_usecases_should_return_success(product_in):
+async def test_usecases_create_should_return_success(product_in):
     result = await product_usecase.create(body=product_in)
 
     assert isinstance(result, ProductOut)
@@ -41,7 +41,7 @@ async def test_usecases_query_should_return_success():
 
 
 async def test_usecases_update_should_return_success(product_inserted, product_up):
-    product_up.price = 7.500
+    product_up.price = "7.500"
     result = await product_usecase.update(id=product_inserted.id, body=product_up)
 
     assert isinstance(result, ProductUpdateOut)
